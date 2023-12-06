@@ -1,0 +1,578 @@
+body
+{   
+    background-image: linear-gradient(rgb(241, 142, 28) 25vh, rgb(255, 255, 255));
+
+}
+
+a 
+{
+    cursor: pointer;
+}
+
+button
+{
+    cursor: pointer;
+}
+.header1
+{
+    width: 100%;
+    height: 80px;
+    background-color: #dd194a;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.15vw solid #f8d125;
+}
+
+.logo
+{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: #dd194a;
+}
+
+.logo img  
+{
+    height: 70px;
+    align-self: center;
+}
+
+.nav
+{
+    width: fit-content;
+    height: 100%;
+}
+
+.nav ul
+{
+    list-style: none;
+}
+
+.nav ul li
+{
+    display: inline;
+    flex-wrap: nowrap;
+}
+
+.nav ul li a
+{
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 18px;
+    color: white;
+}
+
+.nav ul li a::before
+{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 0%;
+    height: 4%;
+    background-color: white;
+    transition: width 0.25s ease-out;
+}
+.nav ul li a:hover::before
+{
+    width: 100%;
+}
+
+.media
+{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+    margin-right: 20px;
+}
+
+.in
+{
+    width: fit-content;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.in:hover
+{
+    border: 2px solid #dd194a;
+    border-radius: 10px;
+}
+
+.fb
+{
+    width: fit-content;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fb:hover
+{
+    border: 2px solid #dd194a;
+    border-radius: 10px;
+}
+
+@media(max-width: 730px)
+{
+    .in{
+        height: 20px;
+    }
+
+    .fb{
+        height: 20px;
+    }
+
+    .logo img{
+        height: 40px;
+        width: 80px;
+    }
+
+    .header1{
+        height: 100px;
+    }
+
+    .nav ul li a{
+
+        padding: 0px;
+        padding-left: 8px;
+        line-height: 85px;
+        font-size: 11px;
+    }
+    .nav ul li a::before
+    {
+        content: "";
+        position: absolute;
+        left:0;
+        bottom:0;
+        width: 0%;
+        height: 2%;
+        background-color: white;
+        transition: width 0.25s ease-out;
+    }
+}
+main
+{
+    display: flex;
+    width: 100%;
+    height: 75vh;  
+    margin-top: 10%;
+}
+.main
+{
+    margin-left: 6%;
+}
+
+.main2
+{
+    margin-top: 4%;
+    padding-left: 10%;
+    margin-right: 10%;  
+}
+
+h1
+{
+    font-size: 4vw;
+    line-height: 5vw;
+    font-family:Roboto;
+    font-weight: 550;
+    text-transform: uppercase;
+    color:white;
+}
+
+
+.text
+{
+    font-size: 1.4vw;
+    line-height: 1.6vw;
+    font-family: Roboto;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #dd194a;
+}
+
+.service
+{
+    display: block;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    font-family: Roboto;
+    text-transform: uppercase; 
+    margin-top: 15px;
+    padding: 2%;
+    background-color: #dd194a;
+    width: fit-content;
+    color: white;
+}
+
+.service:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main3
+{
+   font-family: Roboto; 
+   text-transform: uppercase;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-bottom: 10%;
+}
+
+.container
+{
+    width: 30%;
+    height: 35vh;
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+.card
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+    background-image:linear-gradient(45deg, #dd194a, rgb(191, 28, 231));
+
+}
+
+.container:hover > .card
+{
+    transform: rotateY(180deg);
+    transition: ease-out 1500ms;
+ 
+}
+.box, .boxtext 
+{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.box
+{
+    transform: rotateY(180deg);
+    font-size: 1vw;
+    line-height: 2.5vw;
+    font-family: Roboto; 
+    color: white;   
+    padding: 30px;    
+}
+
+.boxtext
+{
+    font-size: 1.8vw;
+    font-family: Roboto;
+    line-height: 2.8vw;
+    font-weight: 600;
+    margin-left: 8vw;
+    margin-top: 10vh;
+    color:white;
+}
+
+
+.footer
+{
+    background-color: #24262b;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 70px 0;
+}
+
+.container-foot
+{
+    max-width: 1170px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.footer-col
+{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4
+{
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: Roboto;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.footer-col h4:hover
+{
+    padding-left: 5px;
+    color:rgb(180, 180, 180)
+}
+
+.footer-col h4::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(161, 133, 9);
+    height: 2px;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.footer-col ul li:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+
+.footer-col ul li
+{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.media-link a
+{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255,0.2);
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: 300ms ease;
+}
+
+.media-link a:hover
+{
+    border-radius: 80%;
+    background-color: white;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.kontakt
+{
+    background-image: linear-gradient(rgba(0,0,0,0.80),rgba(0,0,0,0.70)), url(../Simpelwebtutorial/image/city.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 110vh;
+}
+
+.kontakt-ruta
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.kontakt-ruta h2
+{
+    color: white;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.kontakt-ruta p
+{
+    color: white;
+    font-size: 15px;
+    font-family: Roboto;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.kontakt-mail
+{
+    color: white;
+    font-family: Roboto;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.kontakt-mail input
+{
+    border-bottom: 2px solid white;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+.meddelande
+{
+    margin-top: 30px;
+    flex-wrap: wrap;
+    height: auto;
+    resize: none;
+    overflow-wrap: break-word;
+    border-bottom: 2px solid white;
+}
+
+.kontakta-oss-nu
+{
+    color: white;
+    padding: 10px 17px;
+    background-color: purple;
+    border: 1px solid black;
+    margin-top: 20px; 
+    transition: 150ms ease; 
+    font-family: Roboto; 
+}
+
+.kontakta-oss-nu:hover
+{
+    border-radius: 8%;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 15px;
+    padding: 10px;
+}
+
+.omoss-main
+{
+    font-family: Roboto;
+    display: inline;
+    width: 100%;
+}
+
+.omoss-main h4
+{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase ;
+}
+
+.omoss-main p
+{
+    font-weight: 500;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.main-omoss
+{
+    width: 100%;
+}
+
+.main4
+{
+   font-family: Roboto; 
+   text-transform: uppercase;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-bottom: 10%;
+}
+
+.container1
+{
+    width: 30%;
+    height: 35vh;
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+.card1
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+    background-image:linear-gradient(45deg, #dd194a, rgb(191, 28, 231));
+
+}
+
+.container1:hover > .card1
+{
+    transform: rotateY(180deg);
+    transition: ease-out 1500ms;
+ 
+}
+.box1, .boxtext1
+{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.box1
+{
+    transform: rotateY(180deg);
+    font-size: 1vw;
+    line-height: 2.5vw;
+    font-family: Roboto; 
+    color: white;   
+    padding: 30px;    
+    text-align: leftbttbtbtb;
+    width: 100%;
+}
+
+.boxtext1
+{
+    background-image: url(../Simpelwebtutorial/image/test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}   
+
+
+@media(max-width: 760px)
+{
+    .footer-col
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
