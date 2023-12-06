@@ -1,7 +1,7 @@
 body
 {   
     background-image: linear-gradient(rgb(241, 142, 28) 25vh, rgb(255, 255, 255));
-
+    height: 100%;
 }
 
 a 
@@ -42,6 +42,8 @@ button
 {
     width: fit-content;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav ul
@@ -123,44 +125,48 @@ button
     border-radius: 10px;
 }
 
-@media(max-width: 730px)
+.checkbtn
 {
-    .in{
-        height: 20px;
-    }
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 80px;
+    color:white;
+    padding-right: 15px;
+    display: none;
+}
 
-    .fb{
-        height: 20px;
-    }
+#check
+{
+    display: none;
+}
 
-    .logo img{
-        height: 40px;
-        width: 80px;
-    }
-
-    .header1{
-        height: 100px;
-    }
-
-    .nav ul li a{
-
-        padding: 0px;
-        padding-left: 8px;
-        line-height: 85px;
-        font-size: 11px;
-    }
-    .nav ul li a::before
+@media(max-width: 800px)
+{
+    
+    .header1
     {
-        content: "";
-        position: absolute;
-        left:0;
-        bottom:0;
-        width: 0%;
-        height: 2%;
-        background-color: white;
-        transition: width 0.25s ease-out;
+        height: 200%;
+    }
+    .nav
+    {
+        align-items: center;
+    }
+    .media
+    {
+        display: none;
+    }
+
+    .logo
+    {
+        flex-direction: column;
+        justify-content: space-evenly;
+        
     }
 }
+
+
+
+
 main
 {
     display: flex;
@@ -218,6 +224,56 @@ h1
 .service:hover
 {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media(max-width: 830px)
+{
+
+    main
+    {
+        flex-wrap: wrap;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+    .main
+    {
+        height: 200px;
+        width: 380px;
+        overflow-wrap: break-word;
+    }
+
+    .main2
+    {
+        height: 200px;
+        width: 300px;
+        padding-left: 0; 
+        align-items: center;
+    }
+
+    h1
+    {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .text
+    {
+        font-size: 18px;
+        padding: 12px 0;
+        line-height: 25px;
+    }
+
+    .service
+    {
+        font-size: 12px;
+        height: 30px;
+        width: 120px;
+        text-align: center;
+        line-height: 15px;
+    }
+
+
 }
 
 .main3
@@ -482,7 +538,8 @@ h1
     font-size: 30px;
     font-weight: 500;
     text-align: center;
-    text-transform: uppercase ;
+    text-transform: uppercase;
+    color: white;
 }
 
 .omoss-main p
@@ -491,11 +548,13 @@ h1
     text-align: center;
     margin: 20px;
     margin-bottom: 40px;
+    color: white;
 }
 
 .main-omoss
 {
     width: 100%;
+    height: fit-content;
 }
 
 .main4
@@ -506,12 +565,14 @@ h1
    justify-content: space-around;
    align-items: center;
    margin-bottom: 10%;
+   flex-wrap: wrap;
+   padding: 10 50px;
 }
 
 .container1
 {
-    width: 30%;
-    height: 35vh;
+    width: 165px;
+    height: 250px;
     animation-name: slideInTop;
     animation-duration: 1s;
     animation-timing-function: ease-in;
@@ -528,7 +589,6 @@ h1
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
-    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
     background-image:linear-gradient(45deg, #dd194a, rgb(191, 28, 231));
 
@@ -548,12 +608,11 @@ h1
 .box1
 {
     transform: rotateY(180deg);
-    font-size: 1vw;
+    font-size: 12px;
     line-height: 2.5vw;
     font-family: Roboto; 
     color: white;   
     padding: 30px;    
-    text-align: leftbttbtbtb;
     width: 100%;
 }
 
@@ -566,6 +625,21 @@ h1
     height: 100%;
 }   
 
+@media(max-width: 750px)
+{
+    .main4
+    {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    .container1
+    {
+        margin: 20px;  
+    }
+}
 
 @media(max-width: 760px)
 {
